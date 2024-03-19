@@ -1,0 +1,11 @@
+.projects__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects__container img {
+  width: 30rem;
+  height: 15rem;
+  border-radius: 1rem;
+}
