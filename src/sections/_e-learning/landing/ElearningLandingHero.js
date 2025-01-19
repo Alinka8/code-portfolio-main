@@ -28,7 +28,7 @@ import lgo from '../../../_mock/assets/logo/linkedin.png';
 // ----------------------------------------------------------------------
 
 const SUMMARY = [
-  { value: 2, label: 'Years of Experience', color: 'warning' },
+  { value: 3, label: 'Years of Experience', color: 'warning' },
   { value: 8, label: 'Personal Projects', color: 'error' },
   { value: 2000, label: 'Cups of coffee', color: 'success' },
 ];
@@ -68,7 +68,6 @@ export default function ElearningLandingHero() {
             display: { md: 'flex' },
             alignItems: { md: 'center' },
             height: { md: `100vh` },
-           
           }}
         >
           <Grid container spacing={3}>
@@ -76,17 +75,22 @@ export default function ElearningLandingHero() {
               <Stack
                 sx={{
                   textAlign: { xs: 'center', md: 'unset' },
-                  marginTop:{md:'100px'}
+                  marginTop: { md: '100px' },
                 }}
               >
                 <Typography variant="h1">
                   Hi!
                   <Box component="span" sx={{ color: 'primary.main' }}>
-                    {` I'm Alina Zh`}
+                    {` I'm Alina Zhol`}
                   </Box>
                   <Box
                     component="span"
-                    sx={{ color: 'text.disabled', textDecoration: 'underline', fontSize: '35px', marginTop:'30px' }}
+                    sx={{
+                      color: 'text.disabled',
+                      textDecoration: 'underline',
+                      fontSize: '35px',
+                      marginTop: '30px',
+                    }}
                   >
                     {` Front-end developer `}
                   </Box>
@@ -98,7 +102,7 @@ export default function ElearningLandingHero() {
                       <img
                         src={lgo}
                         alt="linkedin"
-                        style={{ height: '3.2rem', padding: '0.3rem' }}
+                        style={{ height: '3.2rem', padding: '0.3rem', marginBottom: '5px' }}
                       />
                     </a>
                     Get in touch

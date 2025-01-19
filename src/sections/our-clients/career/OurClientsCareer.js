@@ -69,6 +69,7 @@ export default function OurClientsCareer({ brands }) {
                   width: '100%',
                   height: '100%',
                   mx: 'auto',
+                  p: '10px',
                 }}
               />
             </Paper>

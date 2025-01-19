@@ -47,7 +47,7 @@ export default function ElearningLandingIntroduce() {
 
         <Grid xs={12} md={6} lg={6}>
           <Typography variant="h3" sx={{ mb: 3 }}>
-            Front-end React Developer with 2 Years of Experience
+            Front-end React Developer with 3 Years of Experience
           </Typography>
 
           <Typography sx={{ color: 'text.secondary' }}>

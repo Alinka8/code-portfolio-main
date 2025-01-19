@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { useTheme } from '@mui/material/styles';
 // hooks
 import useResponsive from 'src/hooks/useResponsive';
+
 // components
 import Carousel, { CarouselArrows } from 'src/components/carousel';
 //
@@ -17,9 +18,11 @@ import { Container, Stack, Typography, Box, Button } from '@mui/material';
 // components
 
 import './elearningLandingFeaturedCourses.style.css';
+
 import { ElearningCourseItem } from '../course/item';
 import img1 from '../../../_mock/assets/course/course_1.jpg';
-import img2 from '../../../_mock/assets/course/course_2.jpg';
+import img2 from '../../../_mock/assets/course/fleet.jpg';
+import img6 from '../../../_mock/assets/course/easy_shop.jpg';
 import img3 from '../../../_mock/assets/course/course_3.jpg';
 import img4 from '../../../_mock/assets/course/course_4.jpg';
 import img5 from '../../../_mock/assets/course/movie.jpg';
@@ -28,26 +31,26 @@ import img5 from '../../../_mock/assets/course/movie.jpg';
 
 const myProjects = [
   {
-    title: 'Car Dealership',
-    url: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FTL4ZW14DDKjvK8ozSb7A4s%2FDEALERSHIP%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D5-20557%26viewport%3D543%252C361%252C0.33%26scaling%3Dscale-down%26starting-point-node-id%3D5%253A20557%26mode%3Ddesign',
-    img: img1,
-    alt: 'car dealership',
-    description: `The Figma Car Dealership project is a digital design I created. It's all about a car dealership website I made, and let me tell you, it's super cool. The design is sleek and easy to use, with a modern look and feel. I focused on creating a visually appealing and user-friendly interface for automotive businesses. It's a great example of my skills in action!`,
+    title: 'Wiser LBM',
+    img: img2,
+    alt: 'wiser-lbm',
+    description: `
+    Developed a comprehensive web application designed for a trucking company to streamline load management and cost calculation. The platform is tailored to assist dispatchers, brokers, and drivers in tracking load details, calculating expenses, and managing navigation effectively. `,
   },
   {
-    title: 'Daycare',
-    url: 'https://helenlucydaycare.netlify.app/',
-    img: img2,
-    alt: 'daycare',
+    title: 'Easy Shop',
+    img: img6,
+    alt: 'easy shop',
     description: `
-    The React and MUI Daycare project is a portfolio gem, showcasing my frontend skills. It's about a cute daycare site made with React and MUI. Trust me, it's user-friendly and visually charming. With a playful design, I aimed for an enjoyable experience for parents and kids.  It's proof of my ability to blend creativity and functionality for engaging childcare interfaces.`,
+    The EasyShop application is a comprehensive management platform designed to help shops streamline operations, monitor progress, and ensure effective resource utilization. The application features an intuitive setup process and robust analytics for managing tasks, invoices, and operational metrics.`,
   },
+
   {
     title: 'Online Store',
     url: 'https://myperfectstore.netlify.app/',
     img: img4,
     alt: 'online store',
-    description: `This Online Store project is a standout addition to my portfolio, showcasing my frontend skills. It revolves around an elegant online store I developed using React. Rest assured, it boasts a user-friendly interface and visually appealing aesthetics. With a contemporary design, I strived to create an immersive shopping experience for customers.`,
+    description: `This Online Store project is a standout addition to my portfolio, showcasing my frontend skills. It revolves around an elegant online store. Rest assured, it boasts a user-friendly interface and visually appealing aesthetics. With a contemporary design, I strived to create an immersive shopping experience for customers.`,
   },
   {
     title: 'Spy Game',
@@ -55,14 +58,7 @@ const myProjects = [
     img: img3,
     alt: 'spy game',
     description:
-      'The Spy Game project is an exciting addition to my portfolio, highlighting my coding skills. It revolves around a thrilling spy-themed game that I developed. It promises an immersive experience, keeping players on the edge of their seats. With clever coding techniques and attention to detail, I aimed to create an engaging and suspenseful gameplay.',
-  },
-  {
-    title: 'Movies dom',
-    url: 'https://moviestomek.netlify.app/',
-    img: img5,
-    alt: 'movie app',
-    description: ` Js dom creates movie tile and modal from object data. This task involves dynamically generating HTML elements based on the information stored in objects, allowing for a more flexible and maintainable way to display content.  Each click opens a sleek modal with all the details you need. It's more than a website. It's a cool cinematic experience waiting for you!`,
+      'The Spy Game project is an exciting addition to my portfolio, highlighting my coding skills. It revolves around a thrilling spy-themed game that I developed. It promises an immersive experience, keeping players on the edge of their seats. With clever coding techniques and attention to detail.',
   },
 ];
 
@@ -167,9 +163,17 @@ export default function ElearningLandingFeaturedCourses({ courses }) {
                   >
                     {proj.description}
                   </Typography>
+
                   <Button variant="outlined" size="large" color="inherit">
-                    <a href={proj.url} style={{ textDecoration: 'none', color: 'black' }}>
-                      View the project
+                    <a
+                      href={
+                        proj.title === 'Wiser LBM' || proj.title === 'Easy Shop' ? '#' : proj.url
+                      }
+                      style={{ textDecoration: 'none', color: 'black' }}
+                    >
+                      {proj.title === 'Wiser LBM' || proj.title === 'Easy Shop'
+                        ? 'Locked'
+                        : 'View My Project'}
                     </a>
                   </Button>
                 </div>
