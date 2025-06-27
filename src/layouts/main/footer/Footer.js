@@ -25,7 +25,7 @@ export default function Footer() {
   const simpleFooter = (
     <Container sx={{ py: 8, textAlign: 'center' }}>
       <Typography variant="caption" component="div" sx={{ color: 'text.secondary' }}>
-        © 2024. All rights reserved by Alina Zhol
+        © 2025. All rights reserved by Alina Zhol
       </Typography>
     </Container>
   );

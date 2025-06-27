@@ -92,7 +92,7 @@ export default function ElearningLandingHero() {
                       marginTop: '30px',
                     }}
                   >
-                    {` Front-end developer `}
+                    {` Aspiring Product Designer `}
                   </Box>
                 </Typography>
 

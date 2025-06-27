@@ -4,7 +4,7 @@ import { Typography, Stack, Container, Box, Unstable_Grid2 as Grid } from '@mui/
 import useResponsive from 'src/hooks/useResponsive';
 // components
 import Image from 'src/components/images';
-import MySecPhoto from "../../../components/images/portrait3.png"
+import MySecPhoto from '../../../components/images/portrait3.png';
 
 // ----------------------------------------------------------------------
 
@@ -36,25 +36,21 @@ export default function ElearningLandingIntroduce() {
       >
         {isMdUp && (
           <Grid xs={12} md={6} lg={5}>
-            <Image
-              alt="about"
-              src={MySecPhoto}
-              ratio="4/6"
-              sx={{ borderRadius: 2 }}
-            />
+            <Image alt="about" src={MySecPhoto} ratio="4/6" sx={{ borderRadius: 2 }} />
           </Grid>
         )}
 
         <Grid xs={12} md={6} lg={6}>
           <Typography variant="h3" sx={{ mb: 3 }}>
-            Front-end React Developer with 3 Years of Experience
+            Aspiring Product Designer
           </Typography>
 
           <Typography sx={{ color: 'text.secondary' }}>
-            As a front-end React developer, I am passionate about creating engaging and interactive
-            user interfaces. I specialize in building responsive web applications using modern web
-            technologies and best practices. My goal is to deliver high-quality code that meets both
-            functional and aesthetic requirements.
+            I began my career as a QA tester, ensuring the quality and usability of digital
+            products. Along the way, I became increasingly curious about how experiences are
+            designed — not just how they function. That curiosity led me to product design, where
+            I’m now focused on learning how to craft intuitive, meaningful user experiences that go
+            beyond functionality.
           </Typography>
 
           <Stack
@@ -65,29 +61,30 @@ export default function ElearningLandingIntroduce() {
             <Stack spacing={3}>
               <Box sx={{ width: 24, height: 3, bgcolor: 'primary.main' }} />
               <Typography sx={{ color: 'text.secondary' }}>
-                Proficient in developing user interfaces using React.js and JavaScript.{' '}
+                Proficient in building responsive interfaces using React.js, JavaScript, HTML5, and
+                CSS3 — with attention to both structure and user experience.{' '}
               </Typography>
             </Stack>
 
             <Stack spacing={3}>
               <Box sx={{ width: 24, height: 3, bgcolor: 'primary.main' }} />
               <Typography sx={{ color: 'text.secondary' }}>
-                Experienced in working with front-end technologies such as HTML5, CSS3, and modern
-                CSS frameworks like Bootstrap or Tailwind CSS.{' '}
+                Experienced in cross-browser QA testing, applying usability principles to identify
+                layout and accessibility issues early in the development process.{' '}
               </Typography>
             </Stack>
             <Stack spacing={3}>
               <Box sx={{ width: 24, height: 3, bgcolor: 'primary.main' }} />
               <Typography sx={{ color: 'text.secondary' }}>
-                Familiar with version control systems, such as Git, and collaboration tools like
-                GitHub.
+                Familiar with modern UI frameworks like Tailwind CSS and Bootstrap, and passionate
+                about clean, intuitive design.
               </Typography>
             </Stack>
             <Stack spacing={3}>
               <Box sx={{ width: 24, height: 3, bgcolor: 'primary.main' }} />
               <Typography sx={{ color: 'text.secondary' }}>
-                Strong understanding of responsive design principles and cross-browser
-                compatibility.
+                Currently transitioning into product design, bringing a unique perspective from QA
+                and frontend development to craft thoughtful, user-centered interfaces.
               </Typography>
             </Stack>
           </Stack>
